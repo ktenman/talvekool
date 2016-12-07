@@ -59,7 +59,7 @@
                 }
                 $scope.osalejad = angular.copy(vm.osalejas);
                 $scope.oskustasemed = _.uniqBy(_.map($scope.osalejad, 'oskustase'));
-                $scope.oskustase = _.head($scope.oskustasemed);
+                $scope.oskustase = _.sample($scope.oskustasemed);
                 filtreeri();
             }
 
