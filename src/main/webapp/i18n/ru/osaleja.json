@@ -2,22 +2,22 @@
     "talvekoolApp": {
         "osaleja" : {
             "home": {
-                "title": "Osalejas",
-                "createLabel": "Создать новый Osaleja",
-                "createOrEditLabel": "Создать или отредактировать Osaleja",
-                "search": "Найти Osaleja"
+                "title": "Регистрация",
+                "createLabel": "Зарегистрироваться",
+                "createOrEditLabel": "Создать или отредактировать регистрацию",
+                "search": "Найти регистрацию"
             },
-            "created": "Новый Osaleja создан с идентификатором {{ param }}",
-            "updated": "Osaleja обновлен с идентификатором {{ param }}",
-            "deleted": "Osaleja удален с идентификатором {{ param }}",
+            "created": "Новая регистрация создана с идентификатором {{ param }}",
+            "updated": "Регистрация обновлена с идентификатором {{ param }}",
+            "deleted": "Регистрация  удаленa с идентификатором {{ param }}",
             "delete": {
-                "question": "Вы уверены что хотите удалить Osaleja {{ id }}?"
+                "question": "Вы уверены что хотите удалить регистрацию {{ id }}?"
             },
             "detail": {
-                "title": "Osaleja"
+                "title": "Регистрация"
             },
-            "nimi": "Nimi",
-            "sugu": "Sugu",
+            "nimi": "Имя",
+            "sugu": "Пол",
             "oskustase": "Oskustase"
         }
     }

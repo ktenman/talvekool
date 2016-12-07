@@ -15,7 +15,7 @@
                 'da': 'Dansk',
                 'de': 'Deutsch',
                 'el': 'Ελληνικά',
-                'en': 'English',
+                'en': 'Eesti',
                 'es': 'Español',
                 'fr': 'Français',
                 'gl': 'Galego',

@@ -11,8 +11,8 @@
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
-                "main": "Account",
-                "settings": "Settings",
+                "main": "Konto",
+                "settings": "Seaded",
                 "password": "Password",
                 "sessions": "Sessions",
                 "login": "Sign in",
@@ -32,7 +32,7 @@
                 "database": "Database",
                 "jhipster-needle-menu-add-admin-element": "JHipster will add additional menu entries here (do not translate!)"
             },
-            "language": "Language"
+            "language": "Keel"
         },
         "form": {
             "username": "Username",

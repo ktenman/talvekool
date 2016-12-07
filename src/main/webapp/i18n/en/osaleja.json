@@ -4,14 +4,14 @@
             "home": {
                 "title": "Talvekooli registreerimine",
                 "createLabel": "Registreeri",
-                "createOrEditLabel": "Create or edit a Osaleja",
-                "search": "Search for Osaleja"
+                "createOrEditLabel": "Lisa või muuda registreering",
+                "search": "Otsi osalejat"
             },
-            "created": "A new Osaleja is created with identifier {{ param }}",
-            "updated": "A Osaleja is updated with identifier {{ param }}",
-            "deleted": "A Osaleja is deleted with identifier {{ param }}",
+            "created": "Registreering õnnestus {{ param }}",
+            "updated": "Uuendus õnnestus {{ param }}",
+            "deleted": "Registreering tühistati {{ param }}",
             "delete": {
-                "question": "Are you sure you want to delete Osaleja {{ id }}?"
+                "question": "Kas tõesti soovid osalejat: {{ id }} kustutada?"
             },
             "detail": {
                 "title": "Osaleja"
