@@ -1,4 +1,4 @@
-(function() {
+(function () {
     'use strict';
 
     angular
@@ -7,8 +7,9 @@
 
     OsalejaController.$inject = ['$scope', '$state', 'Osaleja', 'OsalejaSearch', 'ParseLinks', 'AlertService', 'paginationConstants'];
 
-    function OsalejaController ($scope, $state, Osaleja, OsalejaSearch, ParseLinks, AlertService, paginationConstants) {
+    function OsalejaController($scope, $state, Osaleja, OsalejaSearch, ParseLinks, AlertService, paginationConstants) {
         var vm = this;
+
 
         vm.osalejas = [];
         vm.loadPage = loadPage;
@@ -23,10 +24,11 @@
         vm.clear = clear;
         vm.loadAll = loadAll;
         vm.search = search;
+        vm.filtreeri = filtreeri;
 
         loadAll();
 
-        function loadAll () {
+        function loadAll() {
             if (vm.currentSearch) {
                 OsalejaSearch.query({
                     query: vm.currentSearch,
@@ -55,6 +57,10 @@
                 for (var i = 0; i < data.length; i++) {
                     vm.osalejas.push(data[i]);
                 }
+                $scope.osalejad = angular.copy(vm.osalejas);
+                $scope.oskustasemed = _.uniqBy(_.map($scope.osalejad, 'oskustase'));
+                $scope.oskustase = _.head($scope.oskustasemed);
+                filtreeri();
             }
 
             function onError(error) {
@@ -62,7 +68,20 @@
             }
         }
 
-        function reset () {
+        function filtreeri() {
+            $scope.filtreeritud = _.countBy(_.filter($scope.osalejad, {"oskustase": $scope.oskustase}), 'sugu');
+            var arr = _.toPairs($scope.filtreeritud);
+            var sood = [];
+            var kogus = [];
+            _.forEach(arr, function (data) {
+                sood.push(data[0]);
+                kogus.push(data[1])
+            });
+            $scope.labels = sood;
+            $scope.data = kogus;
+        }
+
+        function reset() {
             vm.page = 0;
             vm.osalejas = [];
             loadAll();
@@ -73,7 +92,7 @@
             loadAll();
         }
 
-        function clear () {
+        function clear() {
             vm.osalejas = [];
             vm.links = {
                 last: 0
@@ -86,8 +105,8 @@
             vm.loadAll();
         }
 
-        function search (searchQuery) {
-            if (!searchQuery){
+        function search(searchQuery) {
+            if (!searchQuery) {
                 return vm.clear();
             }
             vm.osalejas = [];

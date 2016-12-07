@@ -2,8 +2,8 @@
     "talvekoolApp": {
         "osaleja" : {
             "home": {
-                "title": "Osalejas",
-                "createLabel": "Create a new Osaleja",
+                "title": "Talvekooli registreerimine",
+                "createLabel": "Registreeri",
                 "createOrEditLabel": "Create or edit a Osaleja",
                 "search": "Search for Osaleja"
             },

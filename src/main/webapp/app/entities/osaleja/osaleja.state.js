@@ -13,7 +13,7 @@
             parent: 'entity',
             url: '/osaleja',
             data: {
-                authorities: ['ROLE_USER'],
+                // authorities: ['ROLE_USER'],
                 pageTitle: 'talvekoolApp.osaleja.home.title'
             },
             views: {
@@ -37,7 +37,7 @@
             parent: 'entity',
             url: '/osaleja/{id}',
             data: {
-                authorities: ['ROLE_USER'],
+                // authorities: ['ROLE_USER'],
                 pageTitle: 'talvekoolApp.osaleja.detail.title'
             },
             views: {
@@ -70,9 +70,9 @@
         .state('osaleja-detail.edit', {
             parent: 'osaleja-detail',
             url: '/detail/edit',
-            data: {
-                authorities: ['ROLE_USER']
-            },
+            // data: {
+            //     // authorities: ['ROLE_USER']
+            // },
             onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
                 $uibModal.open({
                     templateUrl: 'app/entities/osaleja/osaleja-dialog.html',
@@ -95,9 +95,9 @@
         .state('osaleja.new', {
             parent: 'osaleja',
             url: '/new',
-            data: {
-                authorities: ['ROLE_USER']
-            },
+            // data: {
+            //     // authorities: ['ROLE_USER']
+            // },
             onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
                 $uibModal.open({
                     templateUrl: 'app/entities/osaleja/osaleja-dialog.html',
@@ -125,9 +125,9 @@
         .state('osaleja.edit', {
             parent: 'osaleja',
             url: '/{id}/edit',
-            data: {
-                authorities: ['ROLE_USER']
-            },
+            // data: {
+            //     // authorities: ['ROLE_USER']
+            // },
             onEnter: ['$stateParams', '$state', '$uibModal', function($stateParams, $state, $uibModal) {
                 $uibModal.open({
                     templateUrl: 'app/entities/osaleja/osaleja-dialog.html',
