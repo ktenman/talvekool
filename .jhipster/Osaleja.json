@@ -1,0 +1,36 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "nimi",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "minlength"
+            ],
+            "fieldValidateRulesMinlength": "3"
+        },
+        {
+            "fieldName": "sugu",
+            "fieldType": "Sugu",
+            "fieldValues": "mees, naine",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "oskustase",
+            "fieldType": "Oskustase",
+            "fieldValues": "algaja, keskmine, edasijoudnu",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20161207185854",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "osaleja",
+    "pagination": "infinite-scroll"
+}

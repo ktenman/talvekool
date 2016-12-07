@@ -1,0 +1,24 @@
+{
+    "talvekoolApp": {
+        "osaleja" : {
+            "home": {
+                "title": "Osalejas",
+                "createLabel": "Create a new Osaleja",
+                "createOrEditLabel": "Create or edit a Osaleja",
+                "search": "Search for Osaleja"
+            },
+            "created": "A new Osaleja is created with identifier {{ param }}",
+            "updated": "A Osaleja is updated with identifier {{ param }}",
+            "deleted": "A Osaleja is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Osaleja {{ id }}?"
+            },
+            "detail": {
+                "title": "Osaleja"
+            },
+            "nimi": "Nimi",
+            "sugu": "Sugu",
+            "oskustase": "Oskustase"
+        }
+    }
+}
