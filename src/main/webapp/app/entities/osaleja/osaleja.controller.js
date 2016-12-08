@@ -65,6 +65,7 @@
                         display: true
                     }
                 };
+                $scope.sugu =  _.countBy($scope.osalejad, 'sugu');
                 filtreeri();
             }
 
