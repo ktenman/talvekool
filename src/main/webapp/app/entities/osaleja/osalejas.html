@@ -5,18 +5,6 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-6 no-padding-left">
-                <canvas id="pie " class="chart chart-pie"
-                        chart-data="data" chart-labels="labels" chart-options="options">
-                </canvas>
-            </div>
-            <div class="col-xs-2 no-padding-left">
-                <label for="oskustase">Oskustase</label>
-                <select id="oskustase" name="oskustase" class="form-control" ng-model="oskustase"
-                        ng-change="vm.filtreeri(oskustase)"
-                        ng-options="tase as (tase | uppercase) for tase in oskustasemed">
-                </select>
-            </div>
             <div class="col-xs-4 no-padding-right">
                 <h4>Statistika</h4>
                 <table class="table table-striped">
@@ -38,8 +26,21 @@
                     </tbody>
                 </table>
             </div>
+            <div class="col-xs-6 no-padding-left">
+                <canvas id="pie " class="chart chart-pie"
+                        chart-data="data" chart-labels="labels" chart-options="options">
+                </canvas>
+            </div>
+            <div class="col-xs-2 no-padding-left">
+                <label for="oskustase">Oskustase</label>
+                <select id="oskustase" name="oskustase" class="form-control" ng-model="oskustase"
+                        ng-change="vm.filtreeri(oskustase)"
+                        ng-options="tase as (tase | uppercase) for tase in oskustasemed">
+                </select>
+            </div>
         </div>
         <p></p>
+
         <div class="row">
             <div class="col-xs-4 no-padding-left">
                 <button class="btn btn-primary" ui-sref="osaleja.new">
@@ -49,24 +50,24 @@
                     </span>
                 </button>
             </div>
-            <div class="col-xs-8 no-padding-right">
-                <form name="searchForm" class="form-inline">
-                    <div class="input-group pull-right">
-                        <input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery"
-                               placeholder="{{ 'talvekoolApp.osaleja.home.search' | translate }}">
-                        <span class="input-group-btn width-min">
-                            <button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">
-                                <span class="glyphicon glyphicon-search"></span>
-                            </button>
-                        </span>
-                        <span class="input-group-btn width-min" ng-if="vm.currentSearch">
-                            <button class="btn btn-info" ng-click="vm.clear()">
-                                <span class="glyphicon glyphicon-trash"></span>
-                            </button>
-                        </span>
-                    </div>
-                </form>
-            </div>
+            <!--<div class="col-xs-8 no-padding-right">-->
+                <!--<form name="searchForm" class="form-inline">-->
+                    <!--<div class="input-group pull-right">-->
+                        <!--<input type="text" class="form-control" ng-model="vm.searchQuery" id="searchQuery"-->
+                               <!--placeholder="{{ 'talvekoolApp.osaleja.home.search' | translate }}">-->
+                        <!--<span class="input-group-btn width-min">-->
+                            <!--<button class="btn btn-info" ng-click="vm.search(vm.searchQuery)">-->
+                                <!--<span class="glyphicon glyphicon-search"></span>-->
+                            <!--</button>-->
+                        <!--</span>-->
+                        <!--<span class="input-group-btn width-min" ng-if="vm.currentSearch">-->
+                            <!--<button class="btn btn-info" ng-click="vm.clear()">-->
+                                <!--<span class="glyphicon glyphicon-trash"></span>-->
+                            <!--</button>-->
+                        <!--</span>-->
+                    <!--</div>-->
+                <!--</form>-->
+            <!--</div>-->
         </div>
     </div>
     <br/>
