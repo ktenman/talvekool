@@ -60,6 +60,11 @@
                 $scope.osalejad = angular.copy(vm.osalejas);
                 $scope.oskustasemed = _.uniqBy(_.map($scope.osalejad, 'oskustase'));
                 $scope.oskustase = _.sample($scope.oskustasemed);
+                $scope.options = {
+                    legend: {
+                        display: true
+                    }
+                };
                 filtreeri();
             }
 
@@ -70,7 +75,7 @@
 
         function filtreeri() {
             $scope.filtreeritud = _.countBy(_.filter($scope.osalejad, {"oskustase": $scope.oskustase}), 'sugu');
-            var arr = _.toPairs($scope.filtreeritud);
+            var arr = _.sortBy(_.toPairs($scope.filtreeritud));
             var sood = [];
             var kogus = [];
             _.forEach(arr, function (data) {
